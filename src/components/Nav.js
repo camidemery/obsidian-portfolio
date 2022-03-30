@@ -1,5 +1,6 @@
 import React from 'react';
 
+// NOTE: Need to style this
 export default function Nav() {
   return (
     <>
