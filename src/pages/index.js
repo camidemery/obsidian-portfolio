@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const IndexPage = ({ data }) => {
   const Notes = data.allMdx.nodes.map((node) => (
-    <article>
+    <article key={node.slug}>
       <Link to={`/notes/${node.slug}`}>
         <h1>{node.frontmatter.title}</h1>
       </Link>

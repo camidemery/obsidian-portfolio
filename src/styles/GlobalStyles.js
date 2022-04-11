@@ -1,24 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
+import '@fontsource/poppins';
+import bg from '../images/star-background.svg';
 
 const GlobalStyles = createGlobalStyle`
+    ${normalize}
+    :root {
+      --purple: #8A4FFF;
+      --lavender: #C3BEF7;
+      --alice: #E5ECF4;
+      --mint: #EFFFFA;
+      --white: #ffffff;
+      --black: #000000;
+
+    }
     * {
-        box-sizing: border-box;
+
+      box-sizing: border-box;
     }
 
     html {
-        width: 100%;
-        height: 100%;
+      background-image: url(${bg});
+      background-color: var(--mint);
+      margin: 3rem;
     }
 
     body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        /* background-color: ${({ theme }) => theme.colors.background};
-        color: ${({ theme }) => theme.colors.text}; */
         font-size: 1rem;
-        /* font-family: ${({ theme }) => theme.fonts.primary}; */
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: var(--purple);
         line-height: 1.5rem;
         font-weight: 400;
         text-rendering: optimizeLegibility;
@@ -40,29 +50,18 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 700;
         font-size: 2rem;
         line-height: 2.375rem;
-        /* color: ${({ theme }) => theme.colors.primary};
-        @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-            font-size: 2.625rem;
-            line-height: 4rem;
-        } */
     }
 
     h2 {
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1.5rem;
-        /* color: ${({ theme }) => theme.colors.primary};
-        @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-            font-size: 2rem;
-            line-height: 3rem;
-        } */
     }
 
     h3 {
         font-weight: 700;
         font-size: 1.75rem;
         line-height: 2.25rem;
-        /* color: ${({ theme }) => theme.colors.primary}; */
         margin-bottom: 3rem;
     }
 
@@ -75,7 +74,6 @@ const GlobalStyles = createGlobalStyle`
     hr {
         margin: 3rem auto;
         border-width: .05rem;
-        /* color: ${({ theme }) => theme.colors.tertiary}; */
         opacity: 0.1;
       }
 
