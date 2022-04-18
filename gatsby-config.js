@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `new`,
+    title: `Chaotic Dev`,
     siteUrl: `https://www.yourdomain.tld`,
+    description: 'Cami Demery is the Chaotic Developer',
   },
   plugins: [
     'gatsby-plugin-styled-components',
