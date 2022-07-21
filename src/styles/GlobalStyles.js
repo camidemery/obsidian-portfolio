@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
 
     a {
         display: inline-block;
-        text-decoration: none;
+        /* text-decoration: none; */
         text-decoration-skip-ink: auto;
         color: inherit;
         cursor: pointer;
